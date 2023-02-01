@@ -1,0 +1,8 @@
+:author:    Rui LOPES
+:email:     <rui.d.lopes@me.com>
+:source-highlighter: rouge
+
+= Parent POM
+
+image:https://img.shields.io/badge/License-MIT-yellow.svg[link=https://opensource.org/licenses/MIT,title=MIT License]
+
