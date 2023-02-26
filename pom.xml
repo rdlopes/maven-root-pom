@@ -369,6 +369,7 @@
             <arguments>${release.arguments}</arguments>
             <goals>deploy nexus-staging:release</goals>
             <autoVersionSubmodules>true</autoVersionSubmodules>
+            <checkModificationExcludeList>pom.xml</checkModificationExcludeList>
           </configuration>
         </plugin>
         <plugin>
