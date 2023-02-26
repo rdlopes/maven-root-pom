@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>io.github.rdlopes</groupId>
@@ -365,7 +366,7 @@
           <configuration>
             <releaseProfiles>release</releaseProfiles>
             <arguments>${release.arguments}</arguments>
-            <goals>deploy scm-publish:publish-scm</goals>
+            <goals>deploy nexus-staging:release</goals>
             <autoVersionSubmodules>true</autoVersionSubmodules>
           </configuration>
         </plugin>
