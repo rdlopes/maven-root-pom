@@ -181,19 +181,6 @@
           <version>${directory-maven-plugin.version}</version>
         </plugin>
         <plugin>
-          <groupId>org.jacoco</groupId>
-          <artifactId>jacoco-maven-plugin</artifactId>
-          <version>${jacoco-maven-plugin.version}</version>
-          <executions>
-            <execution>
-              <goals>
-                <goal>prepare-agent</goal>
-                <goal>report</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
-        <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-assembly-plugin</artifactId>
           <version>${maven-assembly-plugin.version}</version>
@@ -365,11 +352,10 @@
           <version>${maven-release-plugin.version}</version>
           <configuration>
             <releaseProfiles>release</releaseProfiles>
-            <tagNameFormat>{project.version}</tagNameFormat>
+            <tagNameFormat>@{project.version}</tagNameFormat>
             <arguments>${release.arguments}</arguments>
             <goals>deploy nexus-staging:release</goals>
             <autoVersionSubmodules>true</autoVersionSubmodules>
-            <checkModificationExcludeList>pom.xml</checkModificationExcludeList>
           </configuration>
         </plugin>
         <plugin>
@@ -483,10 +469,6 @@
       </plugins>
     </pluginManagement>
     <plugins>
-      <plugin>
-        <groupId>org.jacoco</groupId>
-        <artifactId>jacoco-maven-plugin</artifactId>
-      </plugin>
       <plugin>
         <groupId>org.commonjava.maven.plugins</groupId>
         <artifactId>directory-maven-plugin</artifactId>
@@ -639,10 +621,6 @@
             </tagClasses>
           </tagListOptions>
         </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.jacoco</groupId>
-        <artifactId>jacoco-maven-plugin</artifactId>
       </plugin>
     </plugins>
   </reporting>
