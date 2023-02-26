@@ -1,10 +1,10 @@
-name: Build
+name: Release to Maven Central
 on:
   release:
     types: [ created ]
   workflow_dispatch:
 jobs:
-  install:
+  deploy:
     runs-on: [ ubuntu-latest ]
     name: POM deployment to Maven Central
     steps:
