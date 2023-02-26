@@ -17,4 +17,4 @@ jobs:
           gpg-passphrase: ${{ secrets.OSSRH_GPG_PASSPHRASE }}
           cache: maven
       - run: mvn -B install
-      - run: mvn -B deploy
+      - run: mvn -B -Prelease deploy
