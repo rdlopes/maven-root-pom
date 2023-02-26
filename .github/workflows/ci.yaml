@@ -26,9 +26,7 @@ jobs:
           git config user.name "GitHub Actions"
 
       - name: Update version
-        run: |
-          mvn -B release:prepare
-          mvn -B release:perform
+        run: mvn -B release:prepare release:perform
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
