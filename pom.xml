@@ -365,6 +365,7 @@
           <version>${maven-release-plugin.version}</version>
           <configuration>
             <releaseProfiles>release</releaseProfiles>
+            <tagNameFormat>{project.version}</tagNameFormat>
             <arguments>${release.arguments}</arguments>
             <goals>deploy nexus-staging:release</goals>
             <autoVersionSubmodules>true</autoVersionSubmodules>
