@@ -4,7 +4,7 @@
 
   <groupId>io.github.rdlopes</groupId>
   <artifactId>maven-root-pom</artifactId>
-  <version>0.0.2-SNAPSHOT</version>
+  <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Maven Uber POM (io.github.rdlopes)</name>
   <description>Uber POM for io.github.rdlopes projects</description>
@@ -287,7 +287,6 @@
           <artifactId>maven-gpg-plugin</artifactId>
           <version>${maven-gpg-plugin.version}</version>
           <configuration>
-            <useAgent>true</useAgent>
             <gpgArguments>
               <gpgArgument>--pinentry-mode</gpgArgument>
               <argument>loopback</argument>
