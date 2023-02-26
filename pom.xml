@@ -94,7 +94,6 @@
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <project.build.sourceEncoding>${project.encoding}</project.build.sourceEncoding>
     <project.reporting.outputEncoding>${project.encoding}</project.reporting.outputEncoding>
-    <release.arguments/>
     <!-- Dependencies Versions -->
     <cucumber.version>7.8.0</cucumber.version>
     <guava.version>31.1-jre</guava.version>
@@ -349,8 +348,6 @@
           <configuration>
             <releaseProfiles>release</releaseProfiles>
             <tagNameFormat>@{project.version}</tagNameFormat>
-            <arguments>${release.arguments}</arguments>
-            <goals>deploy nexus-staging:release</goals>
             <autoVersionSubmodules>true</autoVersionSubmodules>
           </configuration>
         </plugin>
