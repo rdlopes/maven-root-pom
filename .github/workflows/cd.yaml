@@ -1,7 +1,7 @@
-name: CD (on release)
+name: CD (on tags push)
 on:
-  release:
-    published:
+  push:
+    tags:
 
 jobs:
   deploy:
@@ -20,7 +20,7 @@ jobs:
           gpg-passphrase: MAVEN_GPG_PASSPHRASE
           cache: maven
 
-      - run: mvn -B deploy nexus-staging:release
+      - run: mvn -B deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
