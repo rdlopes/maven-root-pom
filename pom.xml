@@ -100,7 +100,7 @@
     <jackson-bom.version>2.13.4</jackson-bom.version>
     <junit.version>5.9.1</junit.version>
     <logback.version>1.4.1</logback.version>
-    <lombok.version>1.18.24</lombok.version>
+    <lombok.version>1.18.26</lombok.version>
     <spring-boot.version>3.0.4</spring-boot.version>
     <!-- Plugins Versions -->
     <build-helper-maven-plugin.version>3.3.0</build-helper-maven-plugin.version>
