@@ -101,7 +101,7 @@
     <junit.version>5.9.1</junit.version>
     <logback.version>1.4.1</logback.version>
     <lombok.version>1.18.24</lombok.version>
-    <spring-boot.version>2.7.4</spring-boot.version>
+    <spring-boot.version>3.0.4</spring-boot.version>
     <!-- Plugins Versions -->
     <build-helper-maven-plugin.version>3.3.0</build-helper-maven-plugin.version>
     <directory-maven-plugin.version>1.0</directory-maven-plugin.version>
@@ -355,7 +355,7 @@
             <useReleaseProfile>false</useReleaseProfile>
             <releaseProfiles>release</releaseProfiles>
             <autoVersionSubmodules>true</autoVersionSubmodules>
-            <goals />
+            <goals/>
           </configuration>
         </plugin>
         <plugin>
