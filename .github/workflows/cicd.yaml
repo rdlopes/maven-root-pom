@@ -18,7 +18,6 @@ jobs:
     permissions:
       contents: write
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, '[ci skip]')"
     name: Release To Central
     steps:
       - uses: actions/checkout@v3

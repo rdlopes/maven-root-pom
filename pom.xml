@@ -402,7 +402,6 @@
             <useReleaseProfile>false</useReleaseProfile>
             <releaseProfiles>release</releaseProfiles>
             <autoVersionSubmodules>true</autoVersionSubmodules>
-            <scmCommentPrefix>[ci skip]</scmCommentPrefix>
           </configuration>
         </plugin>
         <plugin>
