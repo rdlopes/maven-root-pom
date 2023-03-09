@@ -33,4 +33,7 @@ jobs:
           cache: maven
 
       - run: mvn -B install
-      - run: mvn -B release:prepare release:perform -DcheckModificationExcludeList=pom.xml
+      - run: |
+          git config --global user.name "Github actions"
+          git config --global user.email "bot@github.com"
+          mvn -B release:prepare release:perform -DcheckModificationExcludeList=pom.xml
