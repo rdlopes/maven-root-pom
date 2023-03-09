@@ -15,6 +15,8 @@ env:
 
 jobs:
   deploy-snapshot:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     name: Deploy Snapshot To Central
     steps:
@@ -30,4 +32,5 @@ jobs:
           gpg-passphrase: MAVEN_GPG_PASSPHRASE
           cache: maven
 
-      - run: mvn -B install deploy
+      - run: mvn -B install
+      - run: mvn -B release:prepare release:perform
