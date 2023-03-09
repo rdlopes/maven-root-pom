@@ -33,4 +33,4 @@ jobs:
           cache: maven
 
       - run: mvn -B install
-      - run: mvn -B release:prepare release:perform
+      - run: mvn -B release:prepare release:perform -DcheckModificationExcludeList=pom.xml
