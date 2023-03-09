@@ -19,7 +19,7 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, '[ci skip]')"
-    name: Deploy To Central
+    name: Release To Central
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-java@v3
@@ -34,10 +34,7 @@ jobs:
           cache: maven
 
       - run: mvn -B install
-      - run: |
-          git config --global user.name "Github actions"
-          git config --global user.email "bot@github.com"
-          mvn -B release:prepare release:perform -DcheckModificationExcludeList=pom.xml
+
       - name: Release
         uses: qcastel/github-actions-maven-release@master
         with:
