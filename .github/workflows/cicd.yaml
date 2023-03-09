@@ -33,13 +33,4 @@ jobs:
           gpg-passphrase: MAVEN_GPG_PASSPHRASE
           cache: maven
 
-      - run: mvn -B install
-
-      - name: Release
-        uses: qcastel/github-actions-maven-release@master
-        with:
-          release-branch-name: "main"
-          git-release-bot-name: "Github actions"
-          git-release-bot-email: "bot@github.io"
-          maven-args: "-DcheckModificationExcludeList=pom.xml"
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - run: mvn -B install deploy
