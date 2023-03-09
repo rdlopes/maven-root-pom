@@ -38,6 +38,7 @@ jobs:
       - name: Release
         uses: qcastel/github-actions-maven-release@master
         with:
+          release-branch-name: "main"
           git-release-bot-name: "Github actions"
           git-release-bot-email: "bot@github.io"
           maven-args: "-DcheckModificationExcludeList=pom.xml"
