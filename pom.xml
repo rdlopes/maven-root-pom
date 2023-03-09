@@ -356,7 +356,7 @@
             <useReleaseProfile>false</useReleaseProfile>
             <releaseProfiles>release</releaseProfiles>
             <autoVersionSubmodules>true</autoVersionSubmodules>
-            <goals />
+            <goals/>
           </configuration>
         </plugin>
         <plugin>
