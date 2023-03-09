@@ -96,7 +96,7 @@
     <project.build.sourceEncoding>${project.encoding}</project.build.sourceEncoding>
     <project.reporting.outputEncoding>${project.encoding}</project.reporting.outputEncoding>
     <!-- Dependencies Versions -->
-    <cucumber.version>7.8.0</cucumber.version>
+    <cucumber.version>7.11.1</cucumber.version>
     <guava.version>31.1-jre</guava.version>
     <jackson-bom.version>2.14.2</jackson-bom.version>
     <junit.version>5.9.2</junit.version>
