@@ -97,6 +97,7 @@
     <project.reporting.outputEncoding>${project.encoding}</project.reporting.outputEncoding>
     <!-- Dependencies Versions -->
     <cucumber.version>7.11.1</cucumber.version>
+    <cukedoctor.version>3.9.0</cukedoctor.version>
     <guava.version>31.1-jre</guava.version>
     <jackson-bom.version>2.14.2</jackson-bom.version>
     <junit.version>5.9.2</junit.version>
@@ -170,6 +171,40 @@
     <pluginManagement>
       <plugins>
         <plugin>
+          <groupId>com.github.cukedoctor</groupId>
+          <artifactId>cukedoctor-maven-plugin</artifactId>
+          <version>${cukedoctor-maven-plugin.version}</version>
+          <configuration>
+            <documentTitle>${project.artifactId}</documentTitle>
+            <docVersion>${project.version}</docVersion>
+            <chapterLabel>§</chapterLabel>
+            <toc>left</toc>
+            <format>html</format>
+            <allowUriRead>true</allowUriRead>
+            <stem>latexmath</stem>
+            <hideTags>true</hideTags>
+            <hideFeaturesSection>true</hideFeaturesSection>
+            <hideScenarioKeyword>true</hideScenarioKeyword>
+            <sourceHighlighter>coderay</sourceHighlighter>
+          </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>com.github.cukedoctor</groupId>
+              <artifactId>cukedoctor-section-layout</artifactId>
+              <version>${cukedoctor.version}</version>
+            </dependency>
+          </dependencies>
+          <executions>
+            <execution>
+              <id>living-documentation</id>
+              <goals>
+                <goal>execute</goal>
+              </goals>
+              <phase>post-integration-test</phase>
+            </execution>
+          </executions>
+        </plugin>
+        <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>build-helper-maven-plugin</artifactId>
           <version>${build-helper-maven-plugin.version}</version>
@@ -178,6 +213,17 @@
           <groupId>org.commonjava.maven.plugins</groupId>
           <artifactId>directory-maven-plugin</artifactId>
           <version>${directory-maven-plugin.version}</version>
+          <executions>
+            <execution>
+              <goals>
+                <goal>highest-basedir</goal>
+              </goals>
+              <phase>validate</phase>
+              <configuration>
+                <property>project.rootDirectory</property>
+              </configuration>
+            </execution>
+          </executions>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
