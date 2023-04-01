@@ -105,6 +105,7 @@
     <lombok.version>1.18.26</lombok.version>
     <spring-boot.version>3.0.5</spring-boot.version>
     <!-- Plugins Versions -->
+    <cukedoctor-maven-plugin.version>${cukedoctor.version}</cukedoctor-maven-plugin.version>
     <build-helper-maven-plugin.version>3.3.0</build-helper-maven-plugin.version>
     <directory-maven-plugin.version>1.0</directory-maven-plugin.version>
     <jacoco-maven-plugin.version>0.8.8</jacoco-maven-plugin.version>
