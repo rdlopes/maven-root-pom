@@ -178,6 +178,7 @@
           <configuration>
             <documentTitle>${project.artifactId}</documentTitle>
             <docVersion>${project.version}</docVersion>
+            <outputFileName>index</outputFileName>
             <chapterLabel>§</chapterLabel>
             <toc>left</toc>
             <format>html</format>
