@@ -103,7 +103,7 @@
     <junit.version>5.9.3</junit.version>
     <logback.version>1.4.1</logback.version>
     <lombok.version>1.18.26</lombok.version>
-    <spring-boot.version>3.0.5</spring-boot.version>
+    <spring-boot.version>3.0.6</spring-boot.version>
     <!-- Plugins Versions -->
     <cukedoctor-maven-plugin.version>${cukedoctor.version}</cukedoctor-maven-plugin.version>
     <build-helper-maven-plugin.version>3.3.0</build-helper-maven-plugin.version>
