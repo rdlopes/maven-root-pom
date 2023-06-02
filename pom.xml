@@ -99,7 +99,7 @@
     <cucumber.version>7.12.0</cucumber.version>
     <cukedoctor.version>3.9.0</cukedoctor.version>
     <guava.version>31.1-jre</guava.version>
-    <jackson-bom.version>2.15.0</jackson-bom.version>
+    <jackson-bom.version>2.15.2</jackson-bom.version>
     <junit.version>5.9.3</junit.version>
     <logback.version>1.4.1</logback.version>
     <lombok.version>1.18.28</lombok.version>
