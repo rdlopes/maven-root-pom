@@ -127,8 +127,8 @@
     <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
     <maven-site-plugin.version>4.0.0-M8</maven-site-plugin.version>
     <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
+    <native.maven.plugin.version>0.9.23</native.maven.plugin.version>
     <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
-    <native.maven.plugin.version>0.9.22</native.maven.plugin.version>
     <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
     <spotbugs-maven-plugin.version>4.7.3.4</spotbugs-maven-plugin.version>
     <spotless-maven-plugin.version>2.37.0</spotless-maven-plugin.version>
