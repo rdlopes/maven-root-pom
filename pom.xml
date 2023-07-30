@@ -122,13 +122,13 @@
     <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
     <maven-javadoc-plugin.version>3.5.0</maven-javadoc-plugin.version>
     <maven-pmd-plugin.version>3.21.0</maven-pmd-plugin.version>
-    <maven-project-info-reports-plugin.version>3.4.4</maven-project-info-reports-plugin.version>
+    <maven-project-info-reports-plugin.version>3.4.5</maven-project-info-reports-plugin.version>
     <maven-release-plugin.version>3.0.1</maven-release-plugin.version>
     <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
     <maven-site-plugin.version>4.0.0-M8</maven-site-plugin.version>
     <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
-    <maven-surefire-plugin.version>3.1.0</maven-surefire-plugin.version>
     <native.maven.plugin.version>0.9.23</native.maven.plugin.version>
+    <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
     <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
     <spotbugs-maven-plugin.version>4.7.3.4</spotbugs-maven-plugin.version>
     <spotless-maven-plugin.version>2.37.0</spotless-maven-plugin.version>
