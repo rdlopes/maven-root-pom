@@ -177,7 +177,7 @@
           <artifactId>cukedoctor-maven-plugin</artifactId>
           <version>${cukedoctor-maven-plugin.version}</version>
           <configuration>
-            <documentTitle>${project.artifactId}</documentTitle>
+            <documentTitle>${project.name}</documentTitle>
             <docVersion>${project.version}</docVersion>
             <outputFileName>index</outputFileName>
             <chapterLabel>§</chapterLabel>
