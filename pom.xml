@@ -46,8 +46,8 @@
   </contributors>
 
   <scm>
-    <connection>scm:git:git@github.com:rdlopes/maven-root-pom.git</connection>
-    <developerConnection>scm:git:git@github.com:rdlopes/maven-root-pom.git</developerConnection>
+    <connection>scm:git:https://github.com/rdlopes/maven-root-pom.git</connection>
+    <developerConnection>scm:git:https://github.com/rdlopes/maven-root-pom.git</developerConnection>
     <tag>maven-root-pom-1.1.17</tag>
     <url>https://github.com/rdlopes/maven-root-pom/tree/main</url>
   </scm>
