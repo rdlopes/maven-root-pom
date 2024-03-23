@@ -188,6 +188,7 @@
             <chapterLabel>§</chapterLabel>
             <toc>left</toc>
             <format>html</format>
+            <dataUri>true</dataUri>
             <allowUriRead>true</allowUriRead>
             <stem>latexmath</stem>
             <hideTags>true</hideTags>
