@@ -15,6 +15,10 @@ jobs:
     name: Release To Central
     steps:
       - uses: actions/checkout@v4
+      - run: |
+          git config --global user.email "bot@github.com"
+          git config --global user.name "GitHub Actions"
+
       - uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
