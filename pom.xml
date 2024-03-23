@@ -48,8 +48,8 @@
   <scm>
     <connection>scm:git:https://github.com/rdlopes/${project.artifactId}.git</connection>
     <developerConnection>scm:git:https://github.com/rdlopes/${project.artifactId}.git</developerConnection>
-    <tag>maven-root-pom-1.2.4</tag>
-    <url>https://github.com/rdlopes/${project.artifactId}/tree/main</url>
+    <tag>HEAD</tag>
+    <url>https://github.com/rdlopes/${project.artifactId}</url>
   </scm>
 
   <issueManagement>
