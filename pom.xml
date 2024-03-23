@@ -334,6 +334,8 @@
               </goals>
               <phase>integration-test</phase>
               <configuration>
+                <argLine>-XX:+EnableDynamicAgentLoading</argLine>
+                <classesDirectory>${project.build.outputDirectory}</classesDirectory>
                 <includes>
                   <include>**/*Features.java</include>
                 </includes>
@@ -438,6 +440,7 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>${maven-surefire-plugin.version}</version>
           <configuration>
+            <argLine>-XX:+EnableDynamicAgentLoading</argLine>
             <includes>
               <include>**/*Test*.java</include>
             </includes>
