@@ -5,8 +5,7 @@ on:
     inputs:
       releaseversion:
         description: 'Release version'
-        required: true
-        default: ''
+        required: false
 
 jobs:
   release:
