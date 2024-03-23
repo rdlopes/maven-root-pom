@@ -1,4 +1,4 @@
-name: CICD
+name: CI
 
 on:
   push:
@@ -7,8 +7,6 @@ on:
 
 jobs:
   deploy:
-    permissions:
-      contents: write
     runs-on: ubuntu-latest
     name: Deploy To Central
     steps:
@@ -24,7 +22,7 @@ jobs:
           gpg-private-key: ${{ secrets.OSSRH_GPG_PRIVATE_KEY }}
           gpg-passphrase: OSSRH_GPG_PASSPHRASE
 
-      - run: mvn -B install deploy
+      - run: mvn install deploy
         env:
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
