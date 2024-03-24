@@ -488,15 +488,6 @@
             <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
             <autoReleaseAfterClose>true</autoReleaseAfterClose>
           </configuration>
-          <executions>
-            <execution>
-              <goals>
-                <goal>deploy</goal>
-                <goal>release</goal>
-              </goals>
-              <phase>deploy</phase>
-            </execution>
-          </executions>
         </plugin>
         <plugin>
           <groupId>com.diffplug.spotless</groupId>
