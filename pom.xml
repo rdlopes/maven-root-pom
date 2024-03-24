@@ -4,7 +4,7 @@
 
   <groupId>io.github.rdlopes</groupId>
   <artifactId>maven-root-pom</artifactId>
-  <version>1.2.17</version>
+  <version>1.2.18-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Maven Uber POM (io.github.rdlopes)</name>
   <description>Uber POM for io.github.rdlopes projects</description>
@@ -48,7 +48,7 @@
   <scm>
     <connection>scm:git:https://github.com/rdlopes/${project.artifactId}.git</connection>
     <developerConnection>scm:git:https://github.com/rdlopes/${project.artifactId}.git</developerConnection>
-    <tag>maven-root-pom-1.2.17</tag>
+    <tag>HEAD</tag>
     <url>https://github.com/rdlopes/${project.artifactId}</url>
   </scm>
 
