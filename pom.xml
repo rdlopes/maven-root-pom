@@ -104,6 +104,8 @@
     <logback.version>1.4.1</logback.version>
     <lombok.version>1.18.32</lombok.version>
     <playwright.version>1.43.0</playwright.version>
+    <springdoc-openapi-starter-webmvc-ui.version>2.5.0</springdoc-openapi-starter-webmvc-ui.version>
+    <springdoc-openapi-starter-webflux-ui.version>2.5.0</springdoc-openapi-starter-webflux-ui.version>
     <spring-boot.version>3.2.5</spring-boot.version>
     <!-- Plugins Versions -->
     <cukedoctor-maven-plugin.version>${cukedoctor.version}</cukedoctor-maven-plugin.version>
@@ -144,6 +146,16 @@
         <version>${spring-boot.version}</version>
         <type>pom</type>
         <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.springdoc</groupId>
+        <artifactId>springdoc-openapi-starter-webflux-ui</artifactId>
+        <version>${springdoc-openapi-starter-webflux-ui.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springdoc</groupId>
+        <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+        <version>${springdoc-openapi-starter-webmvc-ui.version}</version>
       </dependency>
       <dependency>
         <groupId>io.cucumber</groupId>
