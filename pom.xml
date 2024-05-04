@@ -104,7 +104,7 @@
     <logback.version>1.4.1</logback.version>
     <lombok.version>1.18.32</lombok.version>
     <playwright.version>1.43.0</playwright.version>
-    <spring-boot.version>3.2.4</spring-boot.version>
+    <spring-boot.version>3.2.5</spring-boot.version>
     <!-- Plugins Versions -->
     <cukedoctor-maven-plugin.version>${cukedoctor.version}</cukedoctor-maven-plugin.version>
     <build-helper-maven-plugin.version>3.5.0</build-helper-maven-plugin.version>
