@@ -106,7 +106,7 @@
     <playwright.version>1.49.0</playwright.version>
     <springdoc-openapi-starter-webmvc-ui.version>2.5.0</springdoc-openapi-starter-webmvc-ui.version>
     <springdoc-openapi-starter-webflux-ui.version>2.5.0</springdoc-openapi-starter-webflux-ui.version>
-    <spring-boot.version>3.2.5</spring-boot.version>
+    <spring-boot.version>3.4.0</spring-boot.version>
     <!-- Plugins Versions -->
     <cukedoctor-maven-plugin.version>${cukedoctor.version}</cukedoctor-maven-plugin.version>
     <build-helper-maven-plugin.version>3.6.0</build-helper-maven-plugin.version>
