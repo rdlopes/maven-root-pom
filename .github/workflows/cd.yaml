@@ -20,7 +20,7 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
           cache: 'maven'
-          server-id: ossrh
+          server-id: central
           server-username: OSSRH_USERNAME
           server-password: OSSRH_PASSWORD
           gpg-private-key: ${{ secrets.OSSRH_GPG_PRIVATE_KEY }}
@@ -29,14 +29,15 @@ jobs:
           git config --global user.email "bot@github.com"
           git config --global user.name "GitHub Actions"
 
-      - run: mvn release:prepare release:perform -DreleaseVersion=${{ github.event.inputs.version }}
+      - run: mvn -Prelease release:prepare release:perform -DreleaseVersion=${{ github.event.inputs.version }}
         if: ${{ github.event.inputs.version != '' }}
         env:
           GITHUB_TOKEN: ${{ github.token }}
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.OSSRH_GPG_PASSPHRASE }}
-      - run: mvn release:prepare release:perform
+          
+      - run: mvn -Prelease release:prepare release:perform
         if: ${{ github.event.inputs.version == '' }}
         env:
           GITHUB_TOKEN: ${{ github.token }}
