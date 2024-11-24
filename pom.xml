@@ -103,7 +103,7 @@
     <junit.version>5.10.2</junit.version>
     <logback.version>1.4.1</logback.version>
     <lombok.version>1.18.32</lombok.version>
-    <playwright.version>1.43.0</playwright.version>
+    <playwright.version>1.49.0</playwright.version>
     <springdoc-openapi-starter-webmvc-ui.version>2.5.0</springdoc-openapi-starter-webmvc-ui.version>
     <springdoc-openapi-starter-webflux-ui.version>2.5.0</springdoc-openapi-starter-webflux-ui.version>
     <spring-boot.version>3.2.5</spring-boot.version>
