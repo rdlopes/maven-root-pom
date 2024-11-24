@@ -108,8 +108,9 @@
     <springdoc-openapi-starter-webflux-ui.version>2.5.0</springdoc-openapi-starter-webflux-ui.version>
     <spring-boot.version>3.4.0</spring-boot.version>
     <!-- Plugins Versions -->
-    <cukedoctor-maven-plugin.version>${cukedoctor.version}</cukedoctor-maven-plugin.version>
     <build-helper-maven-plugin.version>3.6.0</build-helper-maven-plugin.version>
+    <central-publishing-maven-plugin.version>0.6.0</central-publishing-maven-plugin.version>
+    <cukedoctor-maven-plugin.version>${cukedoctor.version}</cukedoctor-maven-plugin.version>
     <directory-maven-plugin.version>1.0</directory-maven-plugin.version>
     <exec-maven-plugin.version>3.5.0</exec-maven-plugin.version>
     <jacoco-maven-plugin.version>0.8.8</jacoco-maven-plugin.version>
@@ -131,7 +132,7 @@
     <maven-site-plugin.version>4.0.0-M16</maven-site-plugin.version>
     <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
     <native.maven.plugin.version>0.10.3</native.maven.plugin.version>
-    <nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
+    <nexus-staging-maven-plugin.version>1.6.7</nexus-staging-maven-plugin.version>
     <maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
     <spotless-maven-plugin.version>2.43.0</spotless-maven-plugin.version>
     <versions-maven-plugin.version>2.16.2</versions-maven-plugin.version>
@@ -195,6 +196,11 @@
     <pluginManagement>
       <plugins>
         <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>build-helper-maven-plugin</artifactId>
+          <version>${build-helper-maven-plugin.version}</version>
+        </plugin>
+        <plugin>
           <groupId>com.github.cukedoctor</groupId>
           <artifactId>cukedoctor-maven-plugin</artifactId>
           <version>${cukedoctor-maven-plugin.version}</version>
@@ -231,9 +237,15 @@
           </executions>
         </plugin>
         <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>build-helper-maven-plugin</artifactId>
-          <version>${build-helper-maven-plugin.version}</version>
+          <groupId>org.sonatype.central</groupId>
+          <artifactId>central-publishing-maven-plugin</artifactId>
+          <version>${central-publishing-maven-plugin.version}</version>
+          <extensions>true</extensions>
+          <configuration>
+            <publishingServerId>central</publishingServerId>
+            <autoPublish>true</autoPublish>
+            <waitUntil>published</waitUntil>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.commonjava.maven.plugins</groupId>
@@ -708,8 +720,8 @@
             <artifactId>maven-source-plugin</artifactId>
           </plugin>
           <plugin>
-            <groupId>org.sonatype.plugins</groupId>
-            <artifactId>nexus-staging-maven-plugin</artifactId>
+            <groupId>org.sonatype.central</groupId>
+            <artifactId>central-publishing-maven-plugin</artifactId>
           </plugin>
         </plugins>
       </build>
