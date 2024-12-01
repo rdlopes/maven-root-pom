@@ -12,5 +12,5 @@
       "automergeType": "branch"
     }
   ],
-  "reviewer": ["required:rdlopes"]
+  "reviewers": ["required:rdlopes"]
 }
