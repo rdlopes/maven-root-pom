@@ -100,7 +100,7 @@
     <cukedoctor.version>3.9.0</cukedoctor.version>
     <guava.version>31.1-jre</guava.version>
     <jackson-bom.version>2.18.2</jackson-bom.version>
-    <junit.version>5.11.3</junit.version>
+    <junit.version>5.11.4</junit.version>
     <logback.version>1.4.1</logback.version>
     <lombok.version>1.18.36</lombok.version>
     <playwright.version>1.49.0</playwright.version>
