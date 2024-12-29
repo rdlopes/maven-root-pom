@@ -16,4 +16,4 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
           cache: 'maven'
-      - run: mvn install
+      - run: ./mvnw install
