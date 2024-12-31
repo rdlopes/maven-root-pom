@@ -254,7 +254,7 @@
               </goals>
               <phase>validate</phase>
               <configuration>
-                <property>project.rootDirectory</property>
+                <property>project.rootdir</property>
               </configuration>
             </execution>
           </executions>
