@@ -107,7 +107,7 @@
     <spring-boot.version>3.4.1</spring-boot.version>
     <!-- Plugins Versions -->
     <build-helper-maven-plugin.version>3.6.0</build-helper-maven-plugin.version>
-    <central-publishing-maven-plugin.version>0.6.0</central-publishing-maven-plugin.version>
+    <central-publishing-maven-plugin.version>0.7.0</central-publishing-maven-plugin.version>
     <cukedoctor-maven-plugin.version>${cukedoctor.version}</cukedoctor-maven-plugin.version>
     <directory-maven-plugin.version>1.0</directory-maven-plugin.version>
     <exec-maven-plugin.version>3.5.0</exec-maven-plugin.version>
