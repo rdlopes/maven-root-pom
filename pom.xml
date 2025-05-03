@@ -98,7 +98,7 @@
     <!-- Dependencies Versions -->
     <cucumber.version>7.21.1</cucumber.version>
     <cukedoctor.version>3.9.0</cukedoctor.version>
-    <jackson-bom.version>2.18.2</jackson-bom.version>
+    <jackson-bom.version>2.19.0</jackson-bom.version>
     <junit.version>5.12.2</junit.version>
     <lombok.version>1.18.36</lombok.version>
     <playwright.version>1.50.0</playwright.version>
