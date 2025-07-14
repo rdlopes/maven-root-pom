@@ -29,7 +29,7 @@ jobs:
           git config --global user.email "bot@github.com"
           git config --global user.name "GitHub Actions"
 
-      - run: ./mvnw -Prelease release:prepare release:perform -DreleaseVersion=${{ github.event.inputs.version }}
+      - run: ./mvnw release:prepare release:perform -DreleaseVersion=${{ github.event.inputs.version }}
         if: ${{ github.event.inputs.version != '' }}
         env:
           GITHUB_TOKEN: ${{ github.token }}
@@ -37,7 +37,7 @@ jobs:
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.OSSRH_GPG_PASSPHRASE }}
 
-      - run: ./mvnw -Prelease release:prepare release:perform
+      - run: ./mvnw release:prepare release:perform
         if: ${{ github.event.inputs.version == '' }}
         env:
           GITHUB_TOKEN: ${{ github.token }}
