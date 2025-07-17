@@ -1,4 +1,4 @@
-= Maven Root POM image:{badges}/License-MIT-yellow.svg[link={license},title=MIT License]
+= Maven Root POM image:{badge-badges}/License-MIT-yellow.svg[link={license},title=MIT License]
 :author:        Rui LOPES
 :owner:         rdlopes
 :email:         mailto:rui.d.lopes@me.com
@@ -261,6 +261,6 @@ This project is licensed under the MIT License - see the link:{license}[LICENSE]
 
 == Author
 
-image:{badges}/By_Mail-white?style=social&logo=icloud&label=Rui_LOPES[link={email},window=_blank]
+image:{badge-badges}/By_Mail-white?style=social&logo=icloud&label=Rui_LOPES[link={email},window=_blank]
 
-image:{badges}/On_LinkedIn-white?style=social&logo=logmein&label=Rui_LOPES[link={linkedin},window=_blank]
+image:{badge-badges}/On_LinkedIn-white?style=social&logo=logmein&label=Rui_LOPES[link={linkedin},window=_blank]
