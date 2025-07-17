@@ -1,7 +1,266 @@
-:author:    Rui LOPES
-:email:     <rui.d.lopes@me.com>
-:source-highlighter: rouge
+= Maven Root POM image:{badges}/License-MIT-yellow.svg[link={license},title=MIT License]
+:author:        Rui LOPES
+:owner:         rdlopes
+:email:         mailto:rui.d.lopes@me.com
+:group:         io.github.rdlopes
+:project:       maven-root-pom
+:key:           {owner}_{project}
+:repo:          https://github.com/{owner}/{project}
+:ci:            {repo}/actions/workflows/ci.yaml
+:cd:            {repo}/actions/workflows/cd.yaml
+:maven:         https://central.sonatype.com/artifact/{group}/{project}
+:linkedin:      https://www.linkedin.com/in/rdlopes-fr
+:badge:         https://img.shields.io
+:badge-badges:  {badge}/badge
+:badge-maven:   {badge}/maven-central/v/{group}/{project}
+:license:       https://opensource.org/licenses/MIT
 
-= Parent POM
+image:{badge-maven}[link={maven},title=Maven Central Version,window=_blank]
+image:{ci}/badge.svg[link={ci},window=_blank]
+image:{cd}/badge.svg[link={cd},window=_blank]
 
-image:https://img.shields.io/badge/License-MIT-yellow.svg[link=https://opensource.org/licenses/MIT,title=MIT License]
+== Overview
+
+This is a Maven parent POM (`io.github.rdlopes:maven-root-pom`) designed to provide standardized configuration for Java projects in the `io.github.rdlopes` ecosystem.
+It includes comprehensive dependency management, plugin configurations, and build standards to ensure consistency across all projects.
+
+The POM serves as an "Uber POM" that centralizes:
+
+* **Dependency Management**: BOMs for major frameworks (Spring Boot, JUnit, Mockito, etc.)
+* **Plugin Configuration**: Standardized build, test, and quality plugins
+* **Build Standards**: Java 21+, Maven 3.9.6+, UTF-8 encoding
+* **CI/CD Integration**: GitHub Actions workflows for continuous integration and deployment
+* **Code Quality**: Spotless formatting, JaCoCo coverage, Maven Enforcer rules
+
+== Prerequisites
+
+=== Required Versions
+
+* **Java**: 21+ (enforced by Maven Enforcer Plugin)
+* **Maven**: 3.9.6+ (enforced by Maven Enforcer Plugin)
+
+=== Environment Setup
+
+The project uses Maven wrapper with specific JVM configurations:
+
+[source,bash]
+----
+# UTF-8 encoding and Java module compatibility
+-Dfile.encoding=UTF-8
+--add-opens=java.base/java.util=ALL-UNNAMED
+--add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+--add-opens=java.base/java.text=ALL-UNNAMED
+--add-opens=java.desktop/java.awt.font=ALL-UNNAMED
+----
+
+== Usage
+
+=== Adding as Parent POM
+
+To use this parent POM in your project, add it to your `pom.xml`:
+
+[source,xml]
+----
+<parent>
+    <groupId>io.github.rdlopes</groupId>
+    <artifactId>maven-root-pom</artifactId>
+    <version>[VERSION]</version>
+</parent>
+----
+
+=== Available Dependencies
+
+The parent POM provides managed versions for:
+
+==== Core Frameworks
+
+* **Spring Boot**: 3.5.3 (BOM imported)
+* **Jackson**: 2.19.1 (BOM imported)
+* **SpringDoc OpenAPI**: 2.8.9
+
+==== Testing Frameworks
+
+* **JUnit**: 5.13.3 (BOM imported)
+* **Mockito**: 5.17.0 (BOM imported, test scope)
+* **AssertJ**: 3.27.3 (BOM imported)
+* **Cucumber**: 7.26.0 (BOM imported)
+* **Playwright**: 1.53.0 (for browser testing)
+
+==== Development Tools
+
+* **Lombok**: 1.18.38 (with annotation processing)
+* **Cukedoctor**: 3.9.0 (living documentation)
+
+== Build Process
+
+=== Standard Commands
+
+[source,bash]
+----
+# Standard build and test
+./mvnw install
+
+# Code formatting
+./mvnw spotless:apply
+
+# Format check (fails build if not formatted)
+./mvnw spotless:check
+
+# Generate living documentation (if using Cucumber)
+./mvnw post-integration-test
+----
+
+=== Maven Configuration
+
+The project uses Maven wrapper with:
+
+* **Batch mode**: `-B` flag for non-interactive execution
+* **UTF-8 encoding**: Configured in `.mvn/jvm.config`
+* **Java module compatibility**: Opens required modules for modern Java
+
+=== Test Configuration
+
+==== Test Patterns
+
+* **Unit tests**: `**/*Test*.java`
+* **Integration tests**: `**/*Features.java`, `**/*IT.java`
+
+==== JVM Arguments for Tests
+
+[source,bash]
+----
+-XX:+EnableDynamicAgentLoading -Xshare:off -javaagent:${org.mockito:mockito-core:jar}
+----
+
+== Code Quality and Standards
+
+=== Spotless Formatting
+
+* **POM formatting**: Uses `sortPom` with `expandEmptyElements=false`
+* **Execution phases**: Format on `compile`, check on `verify`
+
+=== Maven Enforcer Rules
+
+The following rules are enforced during build:
+
+* **Dependency Convergence**: Ensures consistent dependency versions
+* **Java Version**: Minimum Java 21
+* **Maven Version**: Minimum 3.9.10
+* **Plugin Versions**: Bans LATEST, RELEASE, and SNAPSHOT versions
+* **Surefire/Failsafe Alignment**: Ensures same versions for test plugins
+
+=== Code Coverage
+
+* **JaCoCo**: Configured for code coverage reporting
+* **Integration**: Works with both unit and integration tests
+
+== CI/CD Integration
+
+=== Continuous Integration
+
+**Trigger**: Push to `main` branch
+
+**Environment**:
+* Ubuntu Latest * Java 21 (Temurin distribution) * Maven cache enabled
+
+**Build**: `./mvnw install`
+
+=== Continuous Deployment
+
+**Trigger**: Manual workflow dispatch
+
+**Target**: Maven Central via OSSRH
+
+**Requirements**:
+* GPG signing (`OSSRH_GPG_PRIVATE_KEY` secret) * OSSRH credentials (`OSSRH_USERNAME`, `OSSRH_PASSWORD`) * GitHub token for release operations
+
+**Release Commands**:
+
+[source,bash]
+----
+# With specific version
+./mvnw release:prepare release:perform -DreleaseVersion=$VERSION
+
+# Auto version increment
+./mvnw release:prepare release:perform
+----
+
+== Plugin Configurations
+
+=== Key Plugins Included
+
+==== Build Plugins
+
+* **Central Publishing**: Auto-publish to Maven Central
+* **GPG Plugin**: Artifact signing with pinentry-mode loopback
+* **Javadoc Plugin**: Generate documentation JARs
+* **Source Plugin**: Generate source JARs
+
+==== Quality Plugins
+
+* **Spotless**: Code formatting
+* **JaCoCo**: Code coverage reporting
+* **Maven Enforcer**: Build consistency rules
+
+==== Documentation Plugins
+
+* **Cukedoctor**: Living documentation from Cucumber features
+* **Versions Plugin**: Dependency version management
+
+==== Spring Boot Integration
+
+* **Classifier**: `exec` for executable JARs
+* **Repackage goal**: Enabled by default
+
+== Development Guidelines
+
+=== Release Process
+
+1. Ensure all tests pass and code is formatted
+2. Use GitHub Actions CD workflow for releases
+3. GPG signing is mandatory for Maven Central deployment
+4. Releases create Git tags automatically
+
+=== Code Formatting
+
+* Spotless formatting is enforced in CI
+* Run `./mvnw spotless:apply` before committing
+* Format check runs during `verify` phase
+
+=== Documentation
+
+* Cukedoctor generates living documentation from Cucumber features
+* Output format: HTML with left TOC, LaTeX math support
+* Generated during `post-integration-test` phase
+
+== Troubleshooting
+
+=== Common Issues
+
+==== Module Access Issues
+
+If build fails with module access errors, verify JVM config flags in `.mvn/jvm.config`
+
+==== GPG Signing Issues
+
+Verify pinentry-mode configuration for GPG plugin
+
+==== Dependency Convergence Failures
+
+Require explicit version management in your project's `dependencyManagement` section
+
+==== Build Performance
+
+* Maven cache is enabled in CI/CD
+* Use `./mvnw` wrapper for consistent Maven version
+* JVM flags optimize for modern Java versions
+
+== License
+
+This project is licensed under the MIT License - see the link:{license}[LICENSE] for details.
+
+== Author
+
+image:{badges}/By_Mail-white?style=social&logo=icloud&label=Rui_LOPES[link={email},window=_blank]
+
+image:{badges}/On_LinkedIn-white?style=social&logo=logmein&label=Rui_LOPES[link={linkedin},window=_blank]
