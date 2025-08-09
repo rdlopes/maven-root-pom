@@ -97,7 +97,7 @@
     <project.reporting.outputEncoding>${project.encoding}</project.reporting.outputEncoding>
     <!-- Dependencies Versions -->
     <assertj.version>3.27.4</assertj.version>
-    <cucumber.version>7.26.0</cucumber.version>
+    <cucumber.version>7.27.0</cucumber.version>
     <cukedoctor.version>3.9.0</cukedoctor.version>
     <jackson-bom.version>2.19.1</jackson-bom.version>
     <junit.version>5.13.4</junit.version>
