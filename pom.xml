@@ -101,7 +101,7 @@
     <cukedoctor.version>3.9.0</cukedoctor.version>
     <jackson-bom.version>2.20.0</jackson-bom.version>
     <junit.version>5.13.4</junit.version>
-    <lombok.version>1.18.38</lombok.version>
+    <lombok.version>1.18.42</lombok.version>
     <mockito.version>5.19.0</mockito.version>
     <playwright.version>1.56.0</playwright.version>
     <springdoc-openapi-starter.version>2.8.9</springdoc-openapi-starter.version>
