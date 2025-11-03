@@ -100,7 +100,7 @@
     <cucumber.version>7.30.0</cucumber.version>
     <cukedoctor.version>3.9.0</cukedoctor.version>
     <jackson-bom.version>2.20.0</jackson-bom.version>
-    <junit.version>5.14.1</junit.version>
+    <junit.version>6.0.1</junit.version>
     <lombok.version>1.18.42</lombok.version>
     <mockito.version>5.20.0</mockito.version>
     <playwright.version>1.56.0</playwright.version>
