@@ -28,7 +28,7 @@ The POM serves as an "Uber POM" that centralizes:
 
 * **Dependency Management**: BOMs for major frameworks (Spring Boot, JUnit, Mockito, etc.)
 * **Plugin Configuration**: Standardized build, test, and quality plugins
-* **Build Standards**: Java 21+, Maven 3.9.6+, UTF-8 encoding
+* **Build Standards**: Java 25+, Maven 3.9.10+, UTF-8 encoding
 * **CI/CD Integration**: GitHub Actions workflows for continuous integration and deployment
 * **Code Quality**: Spotless formatting, JaCoCo coverage, Maven Enforcer rules
 
@@ -36,8 +36,8 @@ The POM serves as an "Uber POM" that centralizes:
 
 === Required Versions
 
-* **Java**: 21+ (enforced by Maven Enforcer Plugin)
-* **Maven**: 3.9.6+ (enforced by Maven Enforcer Plugin)
+* **Java**: 25+ (enforced by Maven Enforcer Plugin)
+* **Maven**: 3.9.10+ (enforced by Maven Enforcer Plugin)
 
 === Environment Setup
 
@@ -144,7 +144,7 @@ The project uses Maven wrapper with:
 The following rules are enforced during build:
 
 * **Dependency Convergence**: Ensures consistent dependency versions
-* **Java Version**: Minimum Java 21
+* **Java Version**: Minimum Java 25
 * **Maven Version**: Minimum 3.9.10
 * **Plugin Versions**: Bans LATEST, RELEASE, and SNAPSHOT versions
 * **Surefire/Failsafe Alignment**: Ensures same versions for test plugins
@@ -161,7 +161,7 @@ The following rules are enforced during build:
 **Trigger**: Push to `main` branch
 
 **Environment**:
-* Ubuntu Latest * Java 21 (Temurin distribution) * Maven cache enabled
+* Ubuntu Latest * Java 25 (Temurin distribution) * Maven cache enabled
 
 **Build**: `./mvnw install`
 
