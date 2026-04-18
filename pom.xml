@@ -99,38 +99,39 @@
     <assertj.version>3.27.6</assertj.version>
     <cucumber.version>7.34.3</cucumber.version>
     <cukedoctor.version>3.9.0</cukedoctor.version>
-    <jackson-bom.version>2.20.1</jackson-bom.version>
+    <jackson-bom.version>2.21.2</jackson-bom.version>
     <junit.version>6.0.1</junit.version>
     <lombok.version>1.18.42</lombok.version>
-    <mockito.version>5.20.0</mockito.version>
-    <playwright.version>1.56.0</playwright.version>
+    <mockito.version>5.23.0</mockito.version>
+    <playwright.version>1.59.0</playwright.version>
     <springdoc-openapi-starter.version>2.8.9</springdoc-openapi-starter.version>
     <spring-boot.version>4.0.5</spring-boot.version>
     <!-- Plugins Versions -->
     <build-helper-maven-plugin.version>3.6.1</build-helper-maven-plugin.version>
-    <central-publishing-maven-plugin.version>0.9.0</central-publishing-maven-plugin.version>
+    <central-publishing-maven-plugin.version>0.10.0</central-publishing-maven-plugin.version>
     <cukedoctor-maven-plugin.version>${cukedoctor.version}</cukedoctor-maven-plugin.version>
     <directory-maven-plugin.version>1.0</directory-maven-plugin.version>
-    <exec-maven-plugin.version>3.6.2</exec-maven-plugin.version>
+    <exec-maven-plugin.version>3.6.3</exec-maven-plugin.version>
     <jacoco-maven-plugin.version>0.8.8</jacoco-maven-plugin.version>
     <maven-antrun-plugin.version>3.2.0</maven-antrun-plugin.version>
-    <maven-assembly-plugin.version>3.7.1</maven-assembly-plugin.version>
+    <maven-assembly-plugin.version>3.8.0</maven-assembly-plugin.version>
     <maven-clean-plugin.version>3.5.0</maven-clean-plugin.version>
     <maven-compiler-plugin.version>3.14.1</maven-compiler-plugin.version>
-    <maven-dependency-plugin.version>3.9.0</maven-dependency-plugin.version>
+    <maven-dependency-plugin.version>3.10.0</maven-dependency-plugin.version>
     <maven-deploy-plugin.version>3.1.4</maven-deploy-plugin.version>
     <maven-enforcer-plugin.version>3.6.2</maven-enforcer-plugin.version>
     <maven-gpg-plugin.version>3.2.8</maven-gpg-plugin.version>
     <maven-install-plugin.version>3.1.4</maven-install-plugin.version>
     <maven-jar-plugin.version>3.5.0</maven-jar-plugin.version>
     <maven-javadoc-plugin.version>3.12.0</maven-javadoc-plugin.version>
+    <mathjax.version>3.2.2</mathjax.version>
     <maven-project-info-reports-plugin.version>3.9.0</maven-project-info-reports-plugin.version>
-    <maven-release-plugin.version>3.2.0</maven-release-plugin.version>
+    <maven-release-plugin.version>3.3.1</maven-release-plugin.version>
     <maven-resources-plugin.version>3.5.0</maven-resources-plugin.version>
     <maven-site-plugin.version>4.0.0-M16</maven-site-plugin.version>
     <maven-source-plugin.version>3.4.0</maven-source-plugin.version>
-    <native.maven.plugin.version>0.11.3</native.maven.plugin.version>
-    <maven-surefire-plugin.version>3.5.4</maven-surefire-plugin.version>
+    <native.maven.plugin.version>1.0.0</native.maven.plugin.version>
+    <maven-surefire-plugin.version>3.5.5</maven-surefire-plugin.version>
     <spotless-maven-plugin.version>3.4.0</spotless-maven-plugin.version>
     <versions-maven-plugin.version>2.21.0</versions-maven-plugin.version>
     <taglist-maven-plugin.version>3.2.2</taglist-maven-plugin.version>
@@ -422,6 +423,10 @@
           <configuration>
             <use>false</use>
             <source>${java.version}</source>
+            <additionalOptions>--allow-script-in-comments</additionalOptions>
+            <header><![CDATA[
+              <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@${mathjax.version}/es5/tex-mml-chtml.js"></script>
+            ]]></header>
           </configuration>
           <executions>
             <execution>
@@ -628,6 +633,10 @@
         <artifactId>maven-javadoc-plugin</artifactId>
         <configuration>
           <quiet>true</quiet>
+          <additionalOptions>--allow-script-in-comments</additionalOptions>
+          <header><![CDATA[
+            <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@${mathjax.version}/es5/tex-mml-chtml.js"></script>
+          ]]></header>
         </configuration>
         <reportSets>
           <reportSet>
