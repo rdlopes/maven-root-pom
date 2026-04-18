@@ -132,8 +132,13 @@
     <native.maven.plugin.version>0.11.3</native.maven.plugin.version>
     <maven-surefire-plugin.version>3.5.4</maven-surefire-plugin.version>
     <spotless-maven-plugin.version>3.0.0</spotless-maven-plugin.version>
+<<<<<<< HEAD
     <versions-maven-plugin.version>2.19.1</versions-maven-plugin.version>
     <taglist-maven-plugin.version>3.2.2</taglist-maven-plugin.version>
+=======
+    <versions-maven-plugin.version>2.21.0</versions-maven-plugin.version>
+    <taglist-maven-plugin.version>3.2.1</taglist-maven-plugin.version>
+>>>>>>> origin/renovate/versions-maven-plugin.version
   </properties>
 
   <dependencyManagement>
