@@ -252,7 +252,7 @@ Require explicit version management in your project's `dependencyManagement` sec
 ==== Build Performance
 
 * Maven cache is enabled in CI/CD
-* Use `./mvnw` wrapper for consistent Maven version
+* Use `./mvnw` wrapper for a consistent Maven version
 * JVM flags optimize for modern Java versions
 
 == License
