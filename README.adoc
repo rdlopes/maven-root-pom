@@ -74,22 +74,21 @@ The parent POM provides managed versions for:
 
 ==== Core Frameworks
 
-* **Spring Boot**: 3.5.3 (BOM imported)
-* **Jackson**: 2.19.1 (BOM imported)
-* **SpringDoc OpenAPI**: 2.8.9
+* **Spring Boot** (BOM imported)
+* **Jackson** (BOM imported)
+* **SpringDoc OpenAPI**
 
 ==== Testing Frameworks
 
-* **JUnit**: 5.13.3 (BOM imported)
-* **Mockito**: 5.17.0 (BOM imported, test scope)
-* **AssertJ**: 3.27.3 (BOM imported)
-* **Cucumber**: 7.26.0 (BOM imported)
-* **Playwright**: 1.53.0 (for browser testing)
+* **JUnit** (BOM imported)
+* **AssertJ** (BOM imported)
+* **Cucumber** (BOM imported)
+* **Playwright** (for browser testing)
 
 ==== Development Tools
 
-* **Lombok**: 1.18.38 (with annotation processing)
-* **Cukedoctor**: 3.9.0 (living documentation)
+* **Lombok** (with annotation processing)
+* **Cukedoctor** (living documentation)
 
 == Build Process
 
@@ -129,7 +128,7 @@ The project uses Maven wrapper with:
 
 [source,bash]
 ----
--XX:+EnableDynamicAgentLoading -Xshare:off -javaagent:${org.mockito:mockito-core:jar}
+-XX:+EnableDynamicAgentLoading -Xshare:off
 ----
 
 == Code Quality and Standards
@@ -151,8 +150,8 @@ The following rules are enforced during build:
 
 === Code Coverage
 
-* **JaCoCo**: Configured for code coverage reporting
-* **Integration**: Works with both unit and integration tests
+* **JaCoCo**: Configured to capture coverage for both unit tests (`jacoco-ut.exec`) and integration tests (`jacoco-it.exec`).
+* **Aggregation**: Automatically merges all test data into a unified `jacoco.exec` file during the `post-integration-test` phase, generating a combined HTML report in the `verify` phase under `target/site/jacoco/`.
 
 == CI/CD Integration
 
