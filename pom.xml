@@ -446,7 +446,9 @@
           <artifactId>maven-gpg-plugin</artifactId>
           <version>${maven-gpg-plugin.version}</version>
           <configuration>
+            <!--suppress UnresolvedMavenProperty -->
             <keyname>${gpg.keyname}</keyname>
+            <!--suppress UnresolvedMavenProperty -->
             <passphraseServerId>${gpg.keyname}</passphraseServerId>
             <gpgArguments>
               <arg>--pinentry-mode</arg>
