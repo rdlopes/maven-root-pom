@@ -99,7 +99,7 @@
     <assertj.version>3.27.7</assertj.version>
     <cucumber.version>7.34.4</cucumber.version>
     <cukedoctor.version>3.9.0</cukedoctor.version>
-    <jackson-bom.version>2.22.0</jackson-bom.version>
+    <jackson-bom.version>2.22.1</jackson-bom.version>
     <junit.version>6.1.1</junit.version>
     <lombok.version>1.18.46</lombok.version>
     <playwright.version>1.61.0</playwright.version>
