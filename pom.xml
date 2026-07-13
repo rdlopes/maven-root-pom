@@ -100,7 +100,7 @@
     <cucumber.version>7.34.4</cucumber.version>
     <cukedoctor.version>3.9.0</cukedoctor.version>
     <jackson-bom.version>2.22.1</jackson-bom.version>
-    <junit.version>6.1.1</junit.version>
+    <junit.version>6.1.2</junit.version>
     <lombok.version>1.18.46</lombok.version>
     <playwright.version>1.61.0</playwright.version>
     <springdoc-openapi-starter.version>3.0.3</springdoc-openapi-starter.version>
